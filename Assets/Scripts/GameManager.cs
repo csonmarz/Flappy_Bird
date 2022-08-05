@@ -13,18 +13,18 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-    Debug.Log("Awake");
+    // Debug.Log("Awake");
         Application.targetFrameRate = 60;
 
-        // player = FindObjectOfType<Player>();
-        // spawner = FindObjectOfType<Spawner>();
+        player = FindObjectOfType<Player>();
+        spawner = FindObjectOfType<Spawner>();
 
         Pause();
     }
 
     public void Play()
     {
-        Debug.Log("Play Function");
+        // Debug.Log("Play Function");
         score = 0;
         scoreText.text = score.ToString();
 
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-         Debug.Log("Pause");
+        //  Debug.Log("Pause");
         Time.timeScale = 0f;
         player.enabled = false;
     }
